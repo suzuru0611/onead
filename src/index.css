@@ -1,0 +1,95 @@
+body {
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* front*/
+
+.front .header {
+  background: url(../img/header.png) no-repeat top center transparent;
+  height: 50px;
+  width: 100%;
+}
+.front div.text {
+  font-size: 20px;
+  color: #000;
+  padding: 15px 0;
+  line-height: 140%;
+}
+.front .header {
+  margin-bottom: 25px;
+}
+
+.content-header,
+.nm-article-body {
+  width: 95%;
+  margin: 0px auto;
+}
+
+.center {
+  margin: 0px auto;
+  display: block;
+}
+
+.nm-article-body {
+  margin-top: 25px;
+}
+
+.nm-article-body .video-caption {
+  display: block;
+  margin: 5px 10px 1.5em 10px;
+  padding: 0;
+  font-size: 14px;
+  color: #2d5968;
+  text-align: left;
+}
+
+.front h3 {
+  font-size: 25px;
+}
+/* front end */
+
+/*.flip {
+     -webkit-perspective: 800;
+      width: 100%;
+      position: relative;
+   }
+   .flip .card.flipped {
+     -webkit-transform: rotatey(-180deg);
+   }
+   .flip .card {
+     width: 100%;
+     height: 100%;
+     -webkit-transform-style: preserve-3d;
+     -webkit-transition: 1.4s;
+   }
+   .flip .card .face {
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     -webkit-backface-visibility: hidden ;
+     z-index: 2;
+     font-family: Georgia;
+     font-size: 3em;
+   }
+   .flip .card .front {
+     position: absolute;
+     z-index: 1;
+       background: #FFF;
+       cursor: pointer;
+   
+   }
+   .flip .card .back {
+     -webkit-transform: rotatey(-180deg);
+       color: black;
+       cursor: pointer;
+       position: relative;
+       max-width: 100%;
+   }*/
+::selection {
+  background: transparent;
+  color: transparent;
+}
