@@ -45,13 +45,6 @@
       }
     </style>
     <script
-      type="text/javascript"
-      src="https://onead.onevision.com.tw/v2/et/oid?cb=window.ONEAD_etag_cscb"
-      async=""
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-    <script
       async=""
       type="text/javascript"
       src="https://ad-specs.guoshipartners.com/static/js/player-mib.min.js"
@@ -369,14 +362,14 @@ OCAyMS40OTg5IDUuOTM1NzhDMjguMDY0OCA1LjkzNTc4IDM1LjU4NTQgNi44MTM4NyAzNS41ODU0IDYu
               id="onead-video"
               autoplay
               loop
-              muted="true"
+              muted
+              playsinline
               style="width: 100% !important; z-index: -1; left: 0px; top: 0px"
             >
               <source
-                videotype="video/mp4"
+                type="video/mp4"
                 src="https://cdn-staging.onead.com.tw/uploads/material/video/file/5441/77ee01a2-3f82-47e8-a272-38474201e242_1200k.mp4?vid=5441?uid=undefined&amp;pid=20146"
               />
-              <source videotype="video/mp4" src="" />
             </video>
           </div>
           <div id="banner-wrapper0">
@@ -545,7 +538,7 @@ OCAyMS40OTg5IDUuOTM1NzhDMjguMDY0OCA1LjkzNTc4IDM1LjU4NTQgNi44MTM4NyAzNS41ODU0IDYu
             "
           >
             <iframe
-              src="https://cdn-staging.onead.com.tw/uploads/material/banner/file/6664/db1c020a-05d9-44f8-9639-fbc38b033d4e/index.html?isipIndex=0&uid=undefined&pid=20146"
+              src="https://cdn-staging.onead.com.tw/uploads/material/banner/file/6664/db1c020a-05d9-44f8-9639-fbc38b033d4e/index.html"
               id="onead-banner1"
               frameborder="no"
               scrolling="no"
@@ -607,186 +600,6 @@ OCAyMS40OTg5IDUuOTM1NzhDMjguMDY0OCA1LjkzNTc4IDM1LjU4NTQgNi44MTM4NyAzNS41ODU0IDYu
         </div>
       </div>
     </div>
-    <script>
-      const muteButton = document.getElementById("mute-button-sensor");
-      const video = document.getElementById("onead-video");
-      const cube = document.getElementById("cube-wrapper0");
-      const onead = document.getElementById("onead-layout0");
-      const gsplayer0 = document.getElementById("gsplayer0");
-      const scrollSpace = document.getElementById("swiper-extend-wrapper0");
-      const imgElement = document.getElementById("volume-img");
-      const bannerWrapper = document.getElementById("banner-wrapper1");
-      const iframe = document.getElementById("onead-banner0");
-      const wrapper = document.getElementById("banner-wrapper0");
-      const muteSvgData =
-        "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjYwIiBmaWxsPSJibGFjayIgZmlsbC1vcGFjaXR5PSIwLjY0Ii8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOTEuNjUzMyA1MC45MjE4QzkwLjM4NDYgNDkuNjUzMiA4OC4zMjc4IDQ5LjY1MzIgODcuMDU5MiA1MC45MjE4TDgxLjA0NjcgNTYuOTM0Mkw3NS4wMzQ2IDUwLjkyMjFDNzMuNzY2IDQ5LjY1MzUgNzEuNzA5MiA0OS42NTM1IDcwLjQ0MDUgNTAuOTIyMUM2OS4xNzE5IDUyLjE5MDggNjkuMTcxOSA1NC4yNDc2IDcwLjQ0MDUgNTUuNTE2Mkw3Ni40NTI2IDYxLjUyODNMNzAuNDQwMSA2Ny41NDA5QzY5LjE3MTQgNjguODA5NSA2OS4xNzE0IDcwLjg2NjQgNzAuNDQwMSA3Mi4xMzVDNzEuNzA4NyA3My40MDM3IDczLjc2NTYgNzMuNDAzNyA3NS4wMzQyIDcyLjEzNUw4MS4wNDY3IDY2LjEyMjVMODcuMDU5NiA3Mi4xMzUzQzg4LjMyODIgNzMuNDA0IDkwLjM4NTEgNzMuNDA0IDkxLjY1MzcgNzIuMTM1M0M5Mi45MjI0IDcwLjg2NjcgOTIuOTIyNCA2OC44MDk4IDkxLjY1MzcgNjcuNTQxMkw4NS42NDA5IDYxLjUyODNMOTEuNjUzMyA1NS41MTU5QzkyLjkyMTkgNTQuMjQ3MyA5Mi45MjE5IDUyLjE5MDUgOTEuNjUzMyA1MC45MjE4WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zOS40OTA1IDQ4Ljc2MTdDMzguOTk5MSA0OS4xNDA0IDM4LjcxMTIgNDkuNzI1NiAzOC43MTEyIDUwLjM0NlY3MS4wMzA4QzM4LjcxMTIgNzEuNjUxMSAzOC45OTkxIDcyLjIzNjMgMzkuNDkwNSA3Mi42MTVMNTYuOTEyOSA4Ni4wNDAxQzU4LjIyNzkgODcuMDUzNCA2MC4xMzM3IDg2LjExNiA2MC4xMzM3IDg0LjQ1NTlWMzYuOTIwOEM2MC4xMzM3IDM1LjI2MDcgNTguMjI3OSAzNC4zMjMzIDU2LjkxMjkgMzUuMzM2NkwzOS40OTA1IDQ4Ljc2MTdaTTI0IDQ5LjM2MjFDMjIuODk1NCA0OS4zNjIxIDIyIDUwLjI1NzUgMjIgNTEuMzYyMVY3MC4wMTQ0QzIyIDcxLjExOSAyMi44OTU0IDcyLjAxNDQgMjQgNzIuMDE0NEgyOC41OTI3QzI5LjY5NzMgNzIuMDE0NCAzMC41OTI3IDcxLjExOSAzMC41OTI3IDcwLjAxNDRWNTEuMzYyMUMzMC41OTI3IDUwLjI1NzUgMjkuNjk3MyA0OS4zNjIxIDI4LjU5MjcgNDkuMzYyMUgyNFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo="; // 靜音圖示
-      const unmuteSvgData =
-        "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjYwIiBmaWxsPSJibGFjayIgZmlsbC1vcGFjaXR5PSIwLjY0Ii8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMzguNzExMiA1MC4zNDZDMzguNzExMiA0OS43MjU2IDM4Ljk5OTEgNDkuMTQwNCAzOS40OTA1IDQ4Ljc2MTdMNTYuOTEyOSAzNS4zMzY2QzU4LjIyNzkgMzQuMzIzMyA2MC4xMzM3IDM1LjI2MDcgNjAuMTMzNyAzNi45MjA5Vjg0LjQ1NTlDNjAuMTMzNyA4Ni4xMTYgNTguMjI3OSA4Ny4wNTM0IDU2LjkxMjkgODYuMDQwMUwzOS40OTA1IDcyLjYxNUMzOC45OTkxIDcyLjIzNjQgMzguNzExMiA3MS42NTExIDM4LjcxMTIgNzEuMDMwOFY1MC4zNDZaTTIyIDUxLjM2MjFDMjIgNTAuMjU3NSAyMi44OTU0IDQ5LjM2MjEgMjQgNDkuMzYyMUgyOC41OTI3QzI5LjY5NzMgNDkuMzYyMSAzMC41OTI3IDUwLjI1NzUgMzAuNTkyNyA1MS4zNjIxVjcwLjAxNDRDMzAuNTkyNyA3MS4xMTkgMjkuNjk3MyA3Mi4wMTQ0IDI4LjU5MjcgNzIuMDE0NEgyNEMyMi44OTU0IDcyLjAxNDQgMjIgNzEuMTE5IDIyIDcwLjAxNDRWNTEuMzYyMVpNNzIuMjU1NyA1My4zNTY3QzcxLjA4NDIgNTIuMTg1MSA2OS4xODQ3IDUyLjE4NTEgNjguMDEzMSA1My4zNTY3QzY2Ljg0MTUgNTQuNTI4MiA2Ni44NDE1IDU2LjQyNzcgNjguMDEzMSA1Ny41OTkzQzY5Ljk0NDEgNTkuNTMwMyA2OS45NDQxIDYyLjY2MDkgNjguMDEzMSA2NC41OTE5QzY2Ljg0MTUgNjUuNzYzNSA2Ni44NDE1IDY3LjY2MyA2OC4wMTMxIDY4LjgzNDVDNjkuMTg0NyA3MC4wMDYxIDcxLjA4NDIgNzAuMDA2MSA3Mi4yNTU3IDY4LjgzNDVDNzYuNTI5OCA2NC41NjA0IDc2LjUyOTggNTcuNjMwOCA3Mi4yNTU3IDUzLjM1NjdaTTc1Ljk1NzYgNDcuNzk1NUM3Ny4xMjkyIDQ2LjYyMzkgNzkuMDI4NyA0Ni42MjM5IDgwLjIwMDMgNDcuNzk1NUM4Ny41NzY5IDU1LjE3MjEgODcuNTc2OSA2Ny4xMzIgODAuMjAwMyA3NC41MDg2Qzc5LjAyODcgNzUuNjgwMiA3Ny4xMjkyIDc1LjY4MDIgNzUuOTU3NiA3NC41MDg2Qzc0Ljc4NiA3My4zMzcgNzQuNzg2IDcxLjQzNzUgNzUuOTU3NiA3MC4yNjZDODAuOTkxMSA2NS4yMzI1IDgwLjk5MTEgNTcuMDcxNiA3NS45NTc2IDUyLjAzODFDNzQuNzg2IDUwLjg2NjYgNzQuNzg2IDQ4Ljk2NzEgNzUuOTU3NiA0Ny43OTU1Wk04OC4xNDQ4IDQwLjY0NTRDODYuOTczMiAzOS40NzM5IDg1LjA3MzcgMzkuNDczOSA4My45MDIxIDQwLjY0NTRDODIuNzMwNiA0MS44MTcgODIuNzMwNiA0My43MTY1IDgzLjkwMjEgNDQuODg4MUM5Mi42NTg2IDUzLjY0NDYgOTIuNjU4NiA2Ny44NDE3IDgzLjkwMjEgNzYuNTk4MkM4Mi43MzA2IDc3Ljc2OTggODIuNzMwNiA3OS42NjkzIDgzLjkwMjEgODAuODQwOEM4NS4wNzM3IDgyLjAxMjQgODYuOTczMiA4Mi4wMTI0IDg4LjE0NDggODAuODQwOEM5OS4yNDQ0IDY5Ljc0MTIgOTkuMjQ0NCA1MS43NDUxIDg4LjE0NDggNDAuNjQ1NFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo="; // 開啟音量圖示
-      const threshold = 60; // 滑動觸發距離
-      let startY = 0;
-      let hasLogged = false;
-      let isMuted = true;
-
-      // 監聽 timeupdate 事件
-      video.addEventListener("timeupdate", () => {
-        if (video.duration > 0) {
-          const currentTime = video.currentTime;
-          const duration = video.duration;
-          const percentage = (currentTime / duration) * 100;
-
-          // 檢查是否達到 50% 的播放進度
-          if (percentage >= 50 && !hasLogged) {
-            console.log("video current 50% duration");
-            hasLogged = true; // 確保只在達到 50% 時執行一次
-          }
-        }
-      });
-
-      document
-        .getElementById("mute-button-sensor")
-        .addEventListener("click", function () {
-          isMuted = !isMuted; // 切換靜音狀態
-          console.log(isMuted);
-          // 更新圖示和視頻靜音狀態
-          if (isMuted) {
-            imgElement.src = muteSvgData;
-            video.muted = true;
-          } else {
-            imgElement.src = unmuteSvgData;
-            video.muted = false;
-          }
-        });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        var video = document.getElementById("onead-video");
-        if (video) {
-          video.play().catch(function (error) {
-            console.error("Video playback failed:", error);
-          });
-        }
-      });
-
-      function handleClick() {
-        window.location.href = "https://www.onead.com.tw/";
-      }
-
-      document
-        .getElementById("video-click-area0")
-        .addEventListener("click", handleClick);
-      document
-        .getElementById("banner-click-area0")
-        .addEventListener("click", handleClick);
-
-      document
-        .getElementById("close-button0")
-        .addEventListener("click", function () {
-          document.getElementById("onead-layout0").style.display = "none";
-        });
-
-      function handleScroll(event) {
-        // 確保 event.clientY 或 event.touches[0].clientY 是數字
-        const currentY =
-          event.type === "touchmove" ? event.touches[0].clientY : event.clientY;
-        const layoutRect = onead.getBoundingClientRect();
-        if (currentY >= layoutRect.top && currentY <= layoutRect.bottom) {
-          // 計算滑動距離
-          const deltaY = startY - currentY;
-
-          // 判斷是否是向上滑動且距離大於閾值
-          if (deltaY > threshold) {
-            const swiper = document
-              .getElementById("bottom-wrapper0")
-              .getBoundingClientRect();
-            const inView = swiper.top < window.innerHeight;
-            imgElement.src = muteSvgData;
-            video.muted = true;
-            bannerWrapper.style.transform = "translateY(0px)";
-            scrollSpace.style.display = inView ? "none" : "block";
-            onead.style.height = inView ? "100%" : "42.5vw";
-            gsplayer0.style.display = inView ? "none" : "block";
-            cube.style.opacity = inView ? "1" : "0";
-            cube.style.display = inView ? "block" : "none";
-            cube.style.transform = inView
-              ? "translateY(0)"
-              : "translateY(1000px)";
-            cube.style.background = inView
-              ? "linear-gradient(rgb(197, 197, 197) 0%, rgb(62, 65, 75) 59.89%)"
-              : "";
-          }
-        }
-      }
-
-      function startTracking(event) {
-        startY =
-          event.type === "touchstart"
-            ? event.touches[0].clientY
-            : event.clientY;
-      }
-      function resetElements() {
-        scrollSpace.style.display = "block";
-        bannerWrapper.style.transform = "translateY(1000px)";
-        cube.style.cssText =
-          "display:none; position: fixed; top: 0px; left: 0px; margin: auto !important; width: 100% !important; height: 100% !important; transform: translateY(1000px); opacity: 0; background: initial;";
-        document.getElementById("onead-layout0").style.cssText =
-          "position: fixed;bottom: 0px;width: 100% !important;height: 42.5vw !important;z-index: 2147483646;";
-        document.getElementById("gsplayer0").style.display = "block";
-      }
-
-      window.addEventListener("touchstart", startTracking);
-      window.addEventListener("touchmove", handleScroll);
-      window.addEventListener("mousedown", startTracking);
-      window.addEventListener("mousemove", handleScroll);
-      document
-        .getElementById("go-back-button0")
-        .addEventListener("click", resetElements);
-
-      function resizeIframe() {
-        const wrapperWidth = wrapper.clientWidth;
-        const wrapperHeight = wrapper.clientHeight;
-
-        // Define the aspect ratio of the iframe content
-        const iframeWidth = 180; // Original width
-        const iframeHeight = 320; // Original height
-        const aspectRatio = iframeWidth / iframeHeight; // Aspect ratio
-
-        // Calculate scale based on parent dimensions
-        let scale;
-
-        if (wrapperWidth / wrapperHeight > aspectRatio) {
-          // Parent is wider, scale based on height
-          scale = wrapperHeight / iframeHeight;
-        } else {
-          // Parent is taller, scale based on width
-          scale = wrapperWidth / iframeWidth;
-        }
-
-        // Apply scale transformation
-        iframe.style.transform = `scale(${scale})`;
-        iframe.style.width = `${iframeWidth}px`; // Keep original width
-        iframe.style.height = `${iframeHeight}px`; // Keep original height
-      }
-      // Initial adjustment
-      resizeIframe();
-
-      // Adjust on window resize
-      window.addEventListener("resize", resizeIframe);
-      var iframeAD = document.getElementById("banner-wrapper0");
-      iframeAD.addEventListener("load", function () {
-        var iframeDoc =
-          iframeAD.contentDocument || iframeAD.contentWindow.document;
-
-        // Monitor changes in the iframe's DOM
-        var observer = new MutationObserver(function (mutations) {
-          mutations.forEach(function (mutation) {
-            if (mutation.addedNodes.length) {
-              console.log("New nodes added to iframe");
-              // Your custom logic here
-            }
-          });
-        });
-
-        observer.observe(iframeDoc.body, { childList: true, subtree: true });
-      });
-    </script>
+    <script src="./index.js"></script>
   </body>
 </html>
